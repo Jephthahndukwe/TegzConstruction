@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Tegz Architecture &amp; Construction Company</title>
+  <meta name="description" content="Tegz Construction services: Civil Works Group (highways, bridges, airports, marine) and Building Group (hospitality, sports, education, healthcare, residential). HVAC, piling, plumbing, electrical.">
+  <link rel="stylesheet" href="css/styles.css?v=20260804141049">
+  <style>
+    .service-feature { display:grid; grid-template-columns:1fr 1fr; align-items:stretch; border-bottom:1px solid var(--border-clr); }
+    .service-feature:last-child { border-bottom:none; }
+    .service-feature__img { position:relative; min-height:420px; overflow:hidden; }
+    .service-feature__img img { width:100%; height:100%; object-fit:cover; display:block; }
+    .service-feature__body { padding:4rem 3.5rem; display:flex; flex-direction:column; justify-content:center; }
+    .service-feature.reverse { direction:rtl; }
+    .service-feature.reverse .service-feature__body,
+    .service-feature.reverse .service-feature__img { direction:ltr; }
+    .svc-list { list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin:1.25rem 0; }
+    .svc-list li { display:flex; align-items:center; gap:0.65rem; font-size:0.9rem; color:var(--text-secondary); }
+    .svc-list li::before { content:''; display:block; width:6px; height:6px; border-radius:50%; background:var(--clr-amber); flex-shrink:0; }
+    @media (max-width:900px) {
+      .service-feature { grid-template-columns:1fr; direction:ltr !important; }
+      .service-feature__img { min-height:260px; }
+      .service-feature__body { padding:2.5rem 1.5rem; direction:ltr !important; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="nav__logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="#09152A" rx="3"/><polygon points="24,4 47,22 1,22" fill="#CC2229" opacity="0.15"/><polyline points="1,22 24,4 47,22" stroke="#CC2229" stroke-width="2.5" stroke-linejoin="round"/><rect x="5" y="22" width="38" height="5" fill="#CC2229" rx="1"/><rect x="19" y="27" width="10" height="17" fill="#CC2229" rx="1"/><line x1="5" y1="45" x2="43" y2="45" stroke="#1B52A0" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <div class="nav__logo-text"><span class="name"><span style="color:#CC2229">T</span><span style="color:#1B52A0">EGZ</span></span><span class="tagline">Architecture &amp; Construction</span></div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9728;</button>
+        <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero__accent"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+      <div class="section-eyebrow">What We Deliver</div>
+      <h1>Our Services</h1>
+      <p>Two focused divisions delivering infrastructure and architectural construction across Nigeria from our Benin, Edo headquarters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<section class="section--sm" style="background:var(--surface-card);border-bottom:1px solid var(--border-clr);">
+  <div class="container">
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-secondary);">Jump to:</span>
+      <a href="#civil" class="btn btn--outline-dark" style="padding:0.55rem 1.25rem;font-size:0.8rem;">Civil Works Group</a>
+      <a href="#building" class="btn btn--outline-dark" style="padding:0.55rem 1.25rem;font-size:0.8rem;">Building Group</a>
+      <a href="#mep" class="btn btn--outline-dark" style="padding:0.55rem 1.25rem;font-size:0.8rem;">MEP Services</a>
+      <a href="#foundations" class="btn btn--outline-dark" style="padding:0.55rem 1.25rem;font-size:0.8rem;">Piling &amp; Excavation</a>
+    </div>
+  </div>
+</section>
+
+<!-- CIVIL WORKS HEADER -->
+<section id="civil" class="section section--dark" style="padding-bottom:3rem;">
+  <div class="container">
+    <div class="division-badge division-badge--civil" style="margin-bottom:1rem;">Civil Works Group</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:#fff;letter-spacing:0.03em;line-height:1;margin-bottom:1rem;">Public Infrastructure</h2>
+    <p style="color:rgba(255,255,255,0.55);max-width:680px;font-size:1.05rem;line-height:1.75;">The Civil Works Group handles Nigeria's public infrastructure needs &#8212; from federal road contracts to state-level bridge rehabilitation, drainage systems, airport works, and marine structures.</p>
+  </div>
+</section>
+
+<div>
+  <div class="service-feature">
+    <div class="service-feature__img">
+      <img src="https://images.unsplash.com/photo-1494976388531-d1058494782d?auto=format&fit=crop&w=900&q=80" alt="Highways and roads">
+    </div>
+    <div class="service-feature__body">
+      <div class="division-badge division-badge--civil" style="margin-bottom:1rem;">Civil Works</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;letter-spacing:0.04em;color:var(--text-primary);margin-bottom:1rem;">Highways &amp; Road Works</h3>
+      <p style="color:var(--text-secondary);line-height:1.75;font-size:0.95rem;margin-bottom:0.75rem;">From new carriageway construction to road rehabilitation and maintenance, our civil teams deliver to federal and state specification. We self-perform excavation, sub-base works, drainage, and surface courses.</p>
+      <ul class="svc-list">
+        <li>New road construction and dual carriageways</li>
+        <li>Road rehabilitation and overlay works</li>
+        <li>Drainage channels and culverts</li>
+        <li>Road markings, signage, and kerbing</li>
+        <li>Sub-base and base-course compaction</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-feature reverse" style="background:var(--surface-card);">
+    <div class="service-feature__img">
+      <img src="https://images.unsplash.com/photo-1719314073622-9399d167725b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fEJyaWRnZSUyMFJlaGFiJTIwaW4lMjBsYWdvc3xlbnwwfHwwfHx8MA%3D%3D" alt="Bridge construction">
+    </div>
+    <div class="service-feature__body">
+      <div class="division-badge division-badge--civil" style="margin-bottom:1rem;">Civil Works</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;letter-spacing:0.04em;color:var(--text-primary);margin-bottom:1rem;">Bridges &amp; Structures</h3>
+      <p style="color:var(--text-secondary);line-height:1.75;font-size:0.95rem;margin-bottom:0.75rem;">Bridge construction and rehabilitation demands structural precision and deep understanding of geotechnical conditions. Our civil engineers and piling specialists work together on every structural waterway crossing.</p>
+      <ul class="svc-list">
+        <li>New bridge construction (concrete and steel)</li>
+        <li>Bridge rehabilitation and deck replacement</li>
+        <li>Abutment and pier works</li>
+        <li>Marine and riverine structures</li>
+        <li>Structural condition surveys</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- BUILDING GROUP HEADER -->
+<section id="building" class="section section--dark-2" style="padding-bottom:3rem;">
+  <div class="container">
+    <div class="division-badge division-badge--building" style="margin-bottom:1rem;">Building Group</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:#fff;letter-spacing:0.03em;line-height:1;margin-bottom:1rem;">Architectural Construction</h2>
+    <p style="color:rgba(255,255,255,0.55);max-width:680px;font-size:1.05rem;line-height:1.75;">The Building Group delivers full architectural construction across hospitality, sports, education, healthcare, industrial, and residential sectors. From design-build mandates to general contracting, we bring projects from ground-breaking to occupation.</p>
+  </div>
+</section>
+
+<div>
+  <div class="service-feature">
+    <div class="service-feature__img">
+      <img src="https://images.unsplash.com/photo-1633605962190-b2ee3986097c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fEhvc3BpdGFsaXR5JTIwJTI2JTIwQ29tbWVyY2lhbCUyMGluJTIwbGFnb3N8ZW58MHx8MHx8fDA%3D" alt="Commercial building">
+    </div>
+    <div class="service-feature__body">
+      <div class="division-badge division-badge--building" style="margin-bottom:1rem;">Building Group</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;letter-spacing:0.04em;color:var(--text-primary);margin-bottom:1rem;">Hospitality &amp; Commercial</h3>
+      <p style="color:var(--text-secondary);line-height:1.75;font-size:0.95rem;margin-bottom:0.75rem;">Hotels, resorts, office towers, retail centres, and mixed-use developments. We manage the complexity of commercial construction &#8212; tight urban sites, multiple trades, and fast-track programmes &#8212; without sacrificing quality.</p>
+      <ul class="svc-list">
+        <li>Hotels and hospitality construction</li>
+        <li>Office towers and commercial complexes</li>
+        <li>Retail and mixed-use development</li>
+        <li>Full MEP coordination and installation</li>
+        <li>Fit-out and interior works</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-feature reverse" style="background:var(--surface-card);">
+    <div class="service-feature__img">
+      <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80" alt="Education and healthcare construction">
+    </div>
+    <div class="service-feature__body">
+      <div class="division-badge division-badge--building" style="margin-bottom:1rem;">Building Group</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;letter-spacing:0.04em;color:var(--text-primary);margin-bottom:1rem;">Education, Sports &amp; Healthcare</h3>
+      <p style="color:var(--text-secondary);line-height:1.75;font-size:0.95rem;margin-bottom:0.75rem;">Schools, universities, hospitals, clinics, and sports facilities require functional precision. Tegz understands the technical requirements of each sector and delivers compliant, purpose-built environments.</p>
+      <ul class="svc-list">
+        <li>School and university construction</li>
+        <li>Hospitals and primary healthcare centres</li>
+        <li>Sports halls, stadia, and courts</li>
+        <li>Special facility fit-outs (labs, operating theatres)</li>
+        <li>Government and institutional buildings</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service-feature">
+    <div class="service-feature__img">
+      <img src="https://images.unsplash.com/photo-1704513815318-b8a233c41955?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFJlc2lkZW50aWFsJTIwQ29uc3RydWN0aW9uJTIwaW4lMjBsYWdvc3xlbnwwfHwwfHx8MA%3D%3D" alt="Residential construction">
+    </div>
+    <div class="service-feature__body">
+      <div class="division-badge division-badge--building" style="margin-bottom:1rem;">Building Group</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;letter-spacing:0.04em;color:var(--text-primary);margin-bottom:1rem;">Residential Construction</h3>
+      <p style="color:var(--text-secondary);line-height:1.75;font-size:0.95rem;margin-bottom:0.75rem;">From individual bespoke homes to large-scale housing estate development, we handle every aspect of residential construction. Our team self-performs structural, MEP, and finishing works for single-source accountability.</p>
+      <ul class="svc-list">
+        <li>Luxury residential homes and villas</li>
+        <li>Housing estate development</li>
+        <li>Multi-storey apartment blocks</li>
+        <li>Renovation and extension works</li>
+        <li>Estate infrastructure (roads, drainage, utilities)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- MEP -->
+<section id="mep" class="section" style="background:var(--surface-card);border-top:1px solid var(--border-clr);">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:4rem;">
+      <div>
+        <div class="section-eyebrow" style="margin-bottom:1rem;">In-House Capability</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">MEP Services<br>HVAC &middot; Plumbing &middot; Electrical</h2>
+        <p style="color:var(--text-secondary);line-height:1.75;margin-bottom:1rem;">We bring mechanical, electrical, and plumbing works in-house &#8212; not subcontracted. One point of accountability, proper coordination between trades, and better outcomes for the building owner.</p>
+        <p style="color:var(--text-secondary);line-height:1.75;margin-bottom:2rem;">Our HVAC teams handle central air conditioning, ventilation, and refrigeration systems. Our plumbing crews manage water supply, drainage, and sanitation. Our electricians cover power distribution, lighting, and specialist systems.</p>
+        <a href="contact.html" class="btn btn--primary">Discuss MEP Requirements <span class="btn-arrow">&#8594;</span></a>
+      </div>
+      <div class="grid-2" style="gap:1rem;">
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2"/><path d="M24 12V6M24 42v-6M12 24H6M42 24h-6M17 17l-4-4M35 35l-4-4M35 17l-4 4M17 31l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>HVAC</h3>
+          <p>Central and split HVAC systems, ventilation, chiller plants, and refrigeration.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 48 48" fill="none"><path d="M24 10c0 0-12 10-12 20a12 12 0 0024 0c0-10-12-20-12-20z" stroke="currentColor" stroke-width="2"/><path d="M24 36v-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Plumbing</h3>
+          <p>Water supply, drainage, sanitation systems, and borehole connections.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 48 48" fill="none"><path d="M16 8l-8 22h12l-4 12 22-26H26l6-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <h3>Electrical</h3>
+          <p>Power distribution, lighting systems, earthing, and LV panel installation.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 18V12a8 8 0 0116 0v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Fire &amp; BMS</h3>
+          <p>Fire detection, suppression systems, and building management system integration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILING -->
+<section id="foundations" class="section section--dark">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:4rem;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1652303713917-2666b8bee507?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8UGlsaW5nJTIwJTI2JTIwRXhjYXZhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+             alt="Piling and excavation works" style="width:100%;border-radius:8px;height:400px;object-fit:cover;">
+      </div>
+      <div>
+        <div class="section-eyebrow" style="margin-bottom:1rem;">Ground Engineering</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:#fff;letter-spacing:0.03em;line-height:1;margin-bottom:1.25rem;">Piling &amp; Excavation</h2>
+        <p style="color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:1rem;">Every stable structure begins below grade. Tegz operates piling and excavation equipment in-house for driven, bored, and mini piles &#8212; critical in Edo's varied ground conditions.</p>
+        <ul class="svc-list" style="margin-bottom:2rem;">
+          <li style="color:rgba(255,255,255,0.6);">Bored and driven piling</li>
+          <li style="color:rgba(255,255,255,0.6);">Mini piles and micro piles</li>
+          <li style="color:rgba(255,255,255,0.6);">Bulk excavation and basement works</li>
+          <li style="color:rgba(255,255,255,0.6);">Soil investigation and reporting</li>
+          <li style="color:rgba(255,255,255,0.6);">Retaining walls and sheet piling</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Get Foundation Advice <span class="btn-arrow">&#8594;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section__header" style="text-align:center;max-width:540px;margin-inline:auto;">
+      <div class="section-eyebrow" style="justify-content:center;">How We Work</div>
+      <h2 class="section-title">Our Project Process</h2>
+    </div>
+    <div class="grid-4">
+      <div class="reveal" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:rgba(224,123,26,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:var(--clr-amber);">1</div>
+        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.05em;margin-bottom:0.65rem;">Consultation</h4>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;">We meet to understand your scope, site conditions, budget, and programme expectations.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:rgba(224,123,26,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:var(--clr-amber);">2</div>
+        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.05em;margin-bottom:0.65rem;">Pre-Construction</h4>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;">Design review, soil investigation, programme development, and procurement planning.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:rgba(224,123,26,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:var(--clr-amber);">3</div>
+        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.05em;margin-bottom:0.65rem;">Construction</h4>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;">Site mobilisation, phased delivery, quality inspections, HSE management, and client reporting.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:rgba(224,123,26,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:var(--clr-amber);">4</div>
+        <h4 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.05em;margin-bottom:0.65rem;">Handover</h4>
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;">Snagging, commissioning, as-built documentation, and defects liability support after occupation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <div class="cta-banner__content">
+      <h2>Have a Project in Mind?</h2>
+      <p>Tell us what you're building. Our team will assess the scope and provide a detailed project proposal.</p>
+      <a href="contact.html" class="btn btn--primary">Request a Proposal <span class="btn-arrow">&#8594;</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="nav__logo" style="margin-bottom:1.25rem;">
+          <svg class="nav__logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="#09152A" rx="3"/><polygon points="24,4 47,22 1,22" fill="#CC2229" opacity="0.15"/><polyline points="1,22 24,4 47,22" stroke="#CC2229" stroke-width="2.5" stroke-linejoin="round"/><rect x="5" y="22" width="38" height="5" fill="#CC2229" rx="1"/><rect x="19" y="27" width="10" height="17" fill="#CC2229" rx="1"/><line x1="5" y1="45" x2="43" y2="45" stroke="#1B52A0" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div class="nav__logo-text"><span class="name"><span style="color:#CC2229">T</span><span style="color:#1B52A0">EGZ</span></span><span class="tagline">Architecture &amp; Construction</span></div>
+        </div>
+        <p>Bringing your Construction Visions to Life.<br>PZ Road off Sapele Road 14, Benin, Edo, Nigeria.</p>
+      </div>
+      <div class="footer__col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Divisions</h4><ul><li><a href="#civil">Civil Works Group</a></li><li><a href="#building">Building Group</a></li><li><a href="#mep">MEP Services</a></li><li><a href="#foundations">Piling &amp; Excavation</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><ul><li><a href="mailto:info@tegzconstruction.com">info@tegzconstruction.com</a></li><li><a href="#">PZ Road off Sapele Rd, Benin</a></li><li><a href="https://ng.linkedin.com/company/tegz-architecture-construction-company" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p>&#169; 2024 Tegz Architecture &amp; Construction Company. All rights reserved.</p>
+      <div class="footer__socials">
+        <a href="https://ng.linkedin.com/company/tegz-architecture-construction-company" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
