@@ -1,6 +1,6 @@
 /* =========================================================
-   TEGZ ARCHITECTURE & CONSTRUCTION — Shared Stylesheet
-   Brand: Red #CC2229 · Blue #1B52A0 · White #FFFFFF
+   TEGZ ARCHITECTURE & CONSTRUCTION - Shared Stylesheet
+   Brand: Red #CC2229, Blue #1B52A0, White #FFFFFF
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -46,15 +46,8 @@
   --border-clr:     #CDD5E4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface-bg:     var(--clr-dark);
-    --surface-card:   var(--clr-dark-2);
-    --text-primary:   #D0DAEA;
-    --text-secondary: var(--clr-smoke);
-    --border-clr:     #192C52;
-  }
-}
+/* Light is the default theme. Dark applies only when the visitor opts in
+   via the theme toggle (which sets data-theme="dark"). */
 :root[data-theme="dark"] {
   --surface-bg:     var(--clr-dark);
   --surface-card:   var(--clr-dark-2);

@@ -1,5 +1,5 @@
 /* =========================================================
-   TEGZCONSTRUCTION — Shared JS
+   TEGZCONSTRUCTION - Shared JS
    ========================================================= */
 
 // --- Nav scroll behavior ---
@@ -48,7 +48,6 @@ document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
 
 // --- Theme toggle ---
 const themeToggle = document.querySelector('.nav__theme-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 const storedTheme = localStorage.getItem('tegz-theme');
 
 const applyTheme = (theme) => {
@@ -59,11 +58,8 @@ const applyTheme = (theme) => {
   }
 };
 
-if (storedTheme) {
-  applyTheme(storedTheme);
-} else {
-  applyTheme(prefersDark.matches ? 'dark' : 'light');
-}
+// Default to light; only use dark if the visitor previously chose it.
+applyTheme(storedTheme === 'dark' ? 'dark' : 'light');
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
